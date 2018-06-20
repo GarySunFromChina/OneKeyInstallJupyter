@@ -7,7 +7,8 @@
 #安装 Anaconda 
  yum -y install wget bzip2 screen cifs-utils
  cd ~
- wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+ #wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+ wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-Linux-x86_64.sh
  chmod +x Anaconda3-5.2.0-Linux-x86_64.sh
  ./Anaconda3-5.2.0-Linux-x86_64.sh
  cd ~
