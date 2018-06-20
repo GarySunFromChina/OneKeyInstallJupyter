@@ -10,6 +10,8 @@
  wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
  chmod +x Anaconda3-5.2.0-Linux-x86_64.sh
  ./Anaconda3-5.2.0-Linux-x86_64.sh
+ cd ~
+ source .bashrc
  source /etc/profile
  conda install -c conda-forge jupyterlab
 
@@ -71,7 +73,7 @@ openssl req -x509 -nodes -days 3650 -newkey rsa:4096 -keyout jkey.key -out jcert
 # c.NotebookApp.port = 8888
 
 #修改参数
-echo -e "c.NotebookApp.certfile = '~/jcert.pem'\nc.NotebookApp.keyfile = '~/jkey.key'\nc.NotebookApp.ip = '*'\nc.NotebookApp.open_browser = True\nc.NotebookApp.password = '"$SHA1"'\nc.NotebookApp.port = 8080\n " >> /root/.jupyter/jupyter_notebook_config.py
+echo -e "c.NotebookApp.certfile = '/root/jcert.pem'\nc.NotebookApp.keyfile = '/root/jkey.key'\nc.NotebookApp.ip = '*'\nc.NotebookApp.open_browser = True\nc.NotebookApp.password = '"$SHA1"'\nc.NotebookApp.port = 8080\n " >> /root/.jupyter/jupyter_notebook_config.py
 
 
 
